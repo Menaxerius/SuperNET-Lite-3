@@ -1,0 +1,4 @@
+- Add NeoDice
+- Add JayEx
+- Coinomat Plugin and Dashboard integration
+- Cashila Integration GUI mockup

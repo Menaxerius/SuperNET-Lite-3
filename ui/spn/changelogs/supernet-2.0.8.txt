@@ -1,0 +1,10 @@
+- Last fixes for NRS 1.6.2+ (done)
+- more GUI design fixes (done)
+- Version check via Alias on Index Screen (done)
+- Integration changes for NRS 1.7, this needs following fixes:
+    - New Advanced Tab that is possible to adjust to NRS GUI (first mockup Jay NRS)
+    - Fix for new Fees  (not done)
+    - Add Shuffling (not done)
+
+- Add Plugins on Advanced Tab   (not done)
+- Bad news for dividend Plugin: needs redesign for fixed fees and bugfixes
