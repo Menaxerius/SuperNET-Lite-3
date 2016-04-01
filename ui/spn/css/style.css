@@ -324,17 +324,17 @@ Main Components
     float: left;
 }
 	.cd-3d-nav li:first-of-type a::before {
-      background-image: url(../img/icon-0.svg); }
+      background-image: url(../img/icon-0.png); }
     .cd-3d-nav li:nth-of-type(2) a::before {
-      background-image: url(../img/icon-1.svg); }
+      background-image: url(../img/icon-1.png); }
     .cd-3d-nav li:nth-of-type(3) a::before {
-      background-image: url(../img/icon-2.svg); }
+      background-image: url(../img/icon-2.png); }
     .cd-3d-nav li:nth-of-type(4) a::before {
-      background-image: url(../img/icon-3.svg); }
+      background-image: url(../img/icon-3.png); }
     .cd-3d-nav li:nth-of-type(5) a::before {
-      background-image: url(../img/icon-4.svg); }
+      background-image: url(../img/icon-4.png); }
     .cd-3d-nav li:nth-of-type(6) a::before {
-      background-image: url(../img/icon-5.svg); }
+      background-image: url(../img/icon-5.png); }
   .cd-3d-nav a {
 	position: relative;
     display: block;
@@ -565,7 +565,7 @@ main {
 	width: 31px;
 	margin-top: 78px;
 	margin-right: -38px;
-	background-image: src('img/ico_logout.svg');
+	background-image: src('img/ico_logout.png');
 	
 	transition: all .2s ease-in-out;
 	-webkit-transition: all .2s ease-in-out;
@@ -699,7 +699,7 @@ main {
 }
 
 .bgbtcd {
-    background-image:url(../img/bg_btcd.svg);
+    background-image:url(../img/bg_btcd.png);
     background-repeat: no-repeat;
 
     transition: all .4s ease;
@@ -745,7 +745,7 @@ main {
 
 .overboxBTCD li:first-of-type {
     position: absolute;
-    background-image: url(../img/minicon_btcd.svg);
+    background-image: url(../img/minicon_btcd.png);
     background-repeat: no-repeat; 
     background-size: 100% 105%;
     width: 80px;
@@ -767,7 +767,7 @@ main {
 	  
 .overboxBTCD li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.svg); 
+    background-image: url(../img/minicon_trans.png); 
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -802,7 +802,7 @@ main {
 
 .overboxBTCD li:nth-of-type(4) {
     position: absolute;
-    background-image: url(../img/minicon_mailsend.svg);
+    background-image: url(../img/minicon_mailsend.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 37px;
@@ -827,7 +827,7 @@ main {
 }
 
 .bgvrc {
-    background-image:url(../img/bg_vrc.svg);
+    background-image:url(../img/bg_vrc.png);
     background-repeat: no-repeat;
 
     transition: all .4s ease;
@@ -872,7 +872,7 @@ main {
 
 .overboxVRC li:first-of-type {
     position: absolute;
-    background-image:url(../img/minicon_vrc.svg);
+    background-image:url(../img/minicon_vrc.png);
     background-repeat: no-repeat; 
     background-size: 100% 100%;
     width: 80px;
@@ -891,7 +891,7 @@ main {
 	  
 .overboxVRC li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.svg); 
+    background-image: url(../img/minicon_trans.png); 
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -923,7 +923,7 @@ main {
 
 .overboxVRC li:nth-of-type(4) {
     position: absolute;
-    background-image: url(../img/minicon_mailsend.svg);
+    background-image: url(../img/minicon_mailsend.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 37px;
@@ -943,7 +943,7 @@ main {
 /* ------------ EMERGING MENU - BITS -------------- */
 
 .bgbits {
-    background-image:url(../img/bg_bits.svg);
+    background-image:url(../img/bg_bits.png);
     background-repeat: no-repeat;
 
     transition: all .4s ease;
@@ -991,7 +991,7 @@ main {
 
 .overboxBITS li:first-of-type {
     position: absolute;
-    background-image:url(../img/minicon_bits.svg);
+    background-image:url(../img/minicon_bits.png);
     background-repeat: no-repeat; 
     background-size: 100% 100%;
     width: 80px;
@@ -1010,7 +1010,7 @@ main {
 	  
 .overboxBITS li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.svg); 
+    background-image: url(../img/minicon_trans.png); 
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -1043,7 +1043,7 @@ main {
 
 .overboxBITS li:nth-of-type(4) {
     position: absolute;
-    background-image: url(../img/minicon_mailsend.svg);
+    background-image: url(../img/minicon_mailsend.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 37px;
@@ -1067,8 +1067,10 @@ main {
 }
 
 .bginfx {
-    background-image:url(../img/bg_infx.svg);
+    background-image:url(../img/bg_infx.png);
     background-repeat: no-repeat;
+    
+    background-size: 100% 100%;
 
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
@@ -1114,7 +1116,7 @@ main {
 
 .overboxINFX li:first-of-type {
     position: absolute;
-    background-image:url(../img/minicon_infx.svg);
+    background-image:url(../img/minicon_infx.png);
     background-repeat: no-repeat; 
     background-size: 100% 100%;
     width: 80px;
@@ -1134,7 +1136,7 @@ main {
   
 .overboxINFX li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.svg); 
+    background-image: url(../img/minicon_trans.png); 
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -1166,7 +1168,7 @@ main {
 
 .overboxINFX li:nth-of-type(4) {
     position: absolute;
-    background-image: url(../img/minicon_mailsend.svg);
+    background-image: url(../img/minicon_mailsend.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 37px;
@@ -1190,7 +1192,7 @@ main {
 }
 
 .bgopal {
-    background-image:url(../img/bg_opal.svg);
+    background-image:url(../img/bg_opal.png);
     background-repeat: no-repeat;
 
     transition: all .4s ease;
@@ -1237,7 +1239,7 @@ main {
 
 .overboxOPAL li:first-of-type {
     position: absolute;
-    background-image:url(../img/minicon_opal.svg);
+    background-image:url(../img/minicon_opal.png);
     background-repeat: no-repeat; 
     background-size: 100% 100%;
     width: 80px;
@@ -1257,7 +1259,7 @@ main {
   
 .overboxOPAL li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.svg); 
+    background-image: url(../img/minicon_trans.png); 
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -1289,7 +1291,7 @@ main {
 
 .overboxOPAL li:nth-of-type(4) {
     position: absolute;
-    background-image: url(../img/minicon_mailsend.svg);
+    background-image: url(../img/minicon_mailsend.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 37px;
@@ -1313,7 +1315,7 @@ main {
 }
 
 .bgnxt {
-    background-image:url(../img/bg_nxt.svg);
+    background-image:url(../img/bg_nxt.png);
     background-repeat: no-repeat;
 
     transition: all .4s ease;
@@ -1360,7 +1362,7 @@ main {
 
 .overboxNXT li:first-of-type {
     position: absolute;
-    background-image:url(../img/minicon_nxt.svg);
+    background-image:url(../img/minicon_nxt.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 80px;
@@ -1379,7 +1381,7 @@ main {
 
 .overboxNXT li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.svg); 
+    background-image: url(../img/minicon_trans.png); 
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -1411,7 +1413,7 @@ main {
 
 .overboxNXT li:nth-of-type(4) {
     position: absolute;
-    background-image: url(../img/minicon_mailsend.svg);
+    background-image: url(../img/minicon_mailsend.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     color: white;
@@ -1436,7 +1438,7 @@ main {
 }
 
 .bgvpn {
-    background-image:url(../img/bg_vpn.svg);
+    background-image:url(../img/bg_vpn.png);
     background-repeat: no-repeat;
 
     transition: all .4s ease;
@@ -1483,7 +1485,7 @@ main {
 
 .overboxVPN li:first-of-type {
     position: absolute;
-    background-image:url(../img/minicon_vpn.svg);
+    background-image:url(../img/minicon_vpn.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 80px;
@@ -1503,7 +1505,7 @@ main {
 	  
 .overboxVPN li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.svg); 
+    background-image: url(../img/minicon_trans.png); 
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -1535,7 +1537,7 @@ main {
 
 .overboxVPN li:nth-of-type(4) {
     position: absolute;
-    background-image: url(../img/minicon_mailsend.svg);
+    background-image: url(../img/minicon_mailsend.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 37px;
@@ -1559,7 +1561,7 @@ main {
 }
 
 .bgdash {
-    background-image:url(../img/bg_dash.svg);
+    background-image:url(../img/bg_dash.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
@@ -1607,7 +1609,7 @@ main {
 
 .overboxDASH li:first-of-type {
     position: absolute;
-    background-image:url(../img/minicon_dash.svg);
+    background-image:url(../img/minicon_dash.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 80px;
@@ -1627,7 +1629,7 @@ main {
     
 .overboxDASH li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.svg); 
+    background-image: url(../img/minicon_trans.png); 
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -1659,7 +1661,7 @@ main {
 
 .overboxDASH li:nth-of-type(4) {
     position: absolute;
-    background-image: url(../img/minicon_mailsend.svg);
+    background-image: url(../img/minicon_mailsend.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 37px;
@@ -1683,7 +1685,7 @@ main {
 }
 
 .bgbtc {
-    background-image:url(../img/bg_btc.svg);
+    background-image:url(../img/bg_btc.png);
     background-repeat: no-repeat;
 
     transition: all .4s ease;
@@ -1747,7 +1749,7 @@ main {
   
 .overboxBTC li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.svg); 
+    background-image: url(../img/minicon_trans.png); 
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -1779,7 +1781,7 @@ main {
 
 .overboxBTC li:nth-of-type(4) {
     position: absolute;
-    background-image: url(../img/minicon_mailsend.svg);
+    background-image: url(../img/minicon_mailsend.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 37px;
@@ -1803,7 +1805,7 @@ main {
 }
 
 .bgltc {
-    background-image:url(../img/bg_ltc.svg);
+    background-image:url(../img/bg_ltc.png);
     background-repeat: no-repeat;
 
     transition: all .4s ease;
@@ -1848,7 +1850,7 @@ main {
 
 .overboxLTC li:first-of-type {
     position: absolute;
-    background-image:url(../img/minicon_ltc.svg);
+    background-image:url(../img/minicon_ltc.png);
     background-repeat: no-repeat; 
     background-size: 100% 100%;
     width: 80px;
@@ -1867,7 +1869,7 @@ main {
   
 .overboxLTC li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.svg); 
+    background-image: url(../img/minicon_trans.png); 
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -1914,7 +1916,7 @@ main {
 .overboxLTC li:nth-of-type(4) { /* Temporary disabled */
     position: absolute;
 	display: none;  
-    background-image: url(../img/minicon_mailsend.svg);
+    background-image: url(../img/minicon_mailsend.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 37px;
@@ -1939,7 +1941,7 @@ main {
 }
 
 .bgbbr {
-	  background-image:url(../img/bg_bbr.svg);
+	  background-image:url(../img/bg_bbr.png);
 	  background-repeat: no-repeat;
 	  
 	  transition: all .4s ease;
@@ -1986,7 +1988,7 @@ main {
 
 .overboxBBR li:first-of-type {
     position: absolute;
-    background-image:url(../img/minicon_bbr.svg);
+    background-image:url(../img/minicon_bbr.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 80px;
@@ -2005,7 +2007,7 @@ main {
  
 .overboxBBR li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.svg); 
+    background-image: url(../img/minicon_trans.png); 
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -2038,7 +2040,7 @@ main {
 
 .overboxBBR li:nth-of-type(4) {
     position: absolute;
-    background-image: url(../img/minicon_mailsend.svg);
+    background-image: url(../img/minicon_mailsend.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 37px;
@@ -2062,7 +2064,7 @@ main {
 }
 
 .bgdoge {
-    background-image:url(../img/bg_doge.svg);
+    background-image:url(../img/bg_doge.png);
     background-repeat: no-repeat;
 
     transition: all .4s ease;
@@ -2109,7 +2111,7 @@ main {
 
 .overboxDOGE li:first-of-type {
     position: absolute;
-    background-image:url(../img/minicon_doge.svg);
+    background-image:url(../img/minicon_doge.png);
     background-repeat: no-repeat; 
     background-size: 100% 100%;
     width: 80px;
@@ -2128,7 +2130,7 @@ main {
   
 .overboxDOGE li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.svg); 
+    background-image: url(../img/minicon_trans.png); 
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -2160,7 +2162,7 @@ main {
 
 .overboxDOGE li:nth-of-type(4) {
     position: absolute;
-    background-image: url(../img/minicon_mailsend.svg);
+    background-image: url(../img/minicon_mailsend.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 37px;
@@ -2184,7 +2186,7 @@ main {
 }
 
 .bgFIBRE {
-    background-image:url(../img/bg_fibre.svg);
+    background-image:url(../img/bg_fibre.png);
     background-repeat: no-repeat;
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
@@ -2230,7 +2232,7 @@ main {
 
 .overboxFIBRE li:first-of-type {
     position: absolute;
-    background-image:url(../img/minicon_fibre.svg);
+    background-image:url(../img/minicon_fibre.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 80px;
@@ -2249,7 +2251,7 @@ main {
   
 .overboxFIBRE li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.svg); 
+    background-image: url(../img/minicon_trans.png); 
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -2281,7 +2283,7 @@ main {
 
 .overboxFIBRE li:nth-of-type(4) {
     position: absolute;
-    background-image: url(../img/minicon_mailsend.svg);
+    background-image: url(../img/minicon_mailsend.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 37px;
@@ -2314,7 +2316,7 @@ main {
 }
 
 .bgSYS {
-    background-image:url(../img/bg_sys.svg);
+    background-image:url(../img/bg_sys.png);
     background-repeat: no-repeat;
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
@@ -2360,7 +2362,7 @@ main {
 
 .overboxSYS li:first-of-type {
     position: absolute;
-    background-image:url(../img/minicon_sys.svg);
+    background-image:url(../img/minicon_sys.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 80px;
@@ -2379,7 +2381,7 @@ main {
 	  
 .overboxSYS li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.svg); 
+    background-image: url(../img/minicon_trans.png); 
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -2411,7 +2413,7 @@ main {
 
 .overboxSYS li:nth-of-type(4) {
     position: absolute;
-    background-image: url(../img/minicon_mailsend.svg);
+    background-image: url(../img/minicon_mailsend.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 37px;
