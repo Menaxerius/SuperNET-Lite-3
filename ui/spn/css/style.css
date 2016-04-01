@@ -767,7 +767,7 @@ main {
 	  
 .overboxBTCD li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.png); 
+   /* background-image: url(../img/minicon_trans.png); */
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -891,7 +891,7 @@ main {
 	  
 .overboxVRC li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.png); 
+  /*  background-image: url(../img/minicon_trans.png);  */
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -1010,7 +1010,7 @@ main {
 	  
 .overboxBITS li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.png); 
+  /*  background-image: url(../img/minicon_trans.png); */
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -1069,7 +1069,7 @@ main {
 .bginfx {
     background-image:url(../img/bg_infx.png);
     background-repeat: no-repeat;
-    
+
     background-size: 100% 100%;
 
     transition: all .4s ease;
@@ -1136,7 +1136,7 @@ main {
   
 .overboxINFX li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.png); 
+ /*   background-image: url(../img/minicon_trans.png); */
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -1258,16 +1258,10 @@ main {
 }
   
 .overboxOPAL li:nth-of-type(2) {
-    position: absolute;
-    background-image: url(../img/minicon_trans.png); 
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 44px;
-    height: 44px;
-    margin-top: 6px;
-    margin-left: 95px;
+     position: absolute;
+    margin-top: 8px;
+    margin-left: 155px;
 
-    opacity: 0.5;
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
 }
@@ -1279,7 +1273,7 @@ main {
 .overboxOPAL li:nth-of-type(3) {
     position: absolute;
     margin-top: 8px;
-    margin-left: 155px;
+    margin-left: 105px;
 
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
@@ -1362,7 +1356,7 @@ main {
 
 .overboxNXT li:first-of-type {
     position: absolute;
-    background-image:url(../img/minicon_nxt.png);
+    /* background-image:url(../img/minicon_nxt.png); */
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 80px;
@@ -1381,7 +1375,7 @@ main {
 
 .overboxNXT li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.png); 
+    /* background-image: url(../img/minicon_trans.png);  */
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -1485,7 +1479,7 @@ main {
 
 .overboxVPN li:first-of-type {
     position: absolute;
-    background-image:url(../img/minicon_vpn.png);
+   background-image:url(../img/minicon_vpn.png);
     background-repeat: no-repeat; 
     background-size: 100%;
     width: 80px;
@@ -1505,7 +1499,7 @@ main {
 	  
 .overboxVPN li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.png); 
+    /* background-image: url(../img/minicon_trans.png);  */
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -1629,7 +1623,7 @@ main {
     
 .overboxDASH li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.png); 
+   /* background-image: url(../img/minicon_trans.png); */
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -1749,7 +1743,7 @@ main {
   
 .overboxBTC li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.png); 
+   /*) background-image: url(../img/minicon_trans.png);  */
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -1869,7 +1863,7 @@ main {
   
 .overboxLTC li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.png); 
+   /* background-image: url(../img/minicon_trans.png); */
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -2007,7 +2001,7 @@ main {
  
 .overboxBBR li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.png); 
+   /* background-image: url(../img/minicon_trans.png); */
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
@@ -2381,7 +2375,7 @@ main {
 	  
 .overboxSYS li:nth-of-type(2) {
     position: absolute;
-    background-image: url(../img/minicon_trans.png); 
+   /* background-image: url(../img/minicon_trans.png); */
     background-repeat: no-repeat;
     background-size: 100%;
     width: 44px;
