@@ -25,7 +25,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <link href="css/sn-app.css" rel="stylesheet" type="text/css" />
-	<style id="user_header_style" type="text/css"></style>
+    <style id="user_header_style" type="text/css"></style>
     <style id="user_sidebar_style" type="text/css"></style>
     <style id="user_boxes_style" type="text/css"></style>
     <link href="spn/css/reset.css" rel="stylesheet" type="text/css" />
@@ -86,24 +86,46 @@
                         <div id="spn_login">
                             <div id="lang_select_area" class="fontOS">
                                 <input type="radio" id="lang_sel_en" class="lang_selector" name="GUIlang" value="en">
-                                <label for="lang_sel_en"><img src="spn/img/flag_en.png" class="tooltip" title="English" /></label>
+                                <label for="lang_sel_en">
+                                    <object title="en" type="image/svg+xml" data="spn/img/flag_en.svg" class="logo" name="GUIlang" value="en-en">
+                                      Eng Logo
+                                    </object>
+                                </label>
                                 <input type="radio" id="lang_sel_chi" class="lang_selector" name="GUIlang" value="zh-cn">
-                                <label for="lang_sel_chi"><img src="spn/img/flag_chi.png" class="tooltip" title="中文" /></label>
+                                <label for="lang_sel_chi">
+
+                                    <object type="image/svg+xml"  data="spn/img/flag_chi.svg" class="logo" name="GUIlang" title="中文">
+                                      中文 Logo
+                                    </object>
+
+                                </label>
                                 <input type="radio" id="lang_sel_ru" class="lang_selector" name="GUIlang" value="ru">
-                                <label for="lang_sel_ru"><img src="spn/img/flag_ru.png" class="tooltip" title="Русский" /></label>
+                                <label for="lang_sel_ru">
+                                    <label for="lang_sel_chi">
+
+                                    <object type="image/svg+xml"  data="spn/img/flag_ru.svg" class="logo" name="GUIlang" title="ru">
+                                      ru Logo
+                                    </object>
+
+                                </label>
+                                </label>
                                 <input type="radio" id="lang_sel_es" class="lang_selector" name="GUIlang" value="es-es">
-                                <label for="lang_sel_es"><img src="spn/img/flag_es.png" class="tooltip" title="Español" /></label>
+                                <label for="lang_sel_es">
+                                    <object type="image/svg+xml"  data="spn/img/flag_es.svg" class="logo" name="GUIlang" title="Español">
+                                      ru Logo
+                                    </object>
+                                </label>
                             </div>
-							
-							<div id="superInfo">
-								<div id="infoServer" class="sofTran">
-									<p>Connected via:
-									<span id="node_ip"></span></p>
-								</div>
-								<div id="infoTut" class="sofTran" onclick="tutPop()">
-									<p>Launch Tutorial</p>
-								</div>
-							</div>
+                            
+                            <div id="superInfo">
+                                <div id="infoServer" class="sofTran">
+                                    <p>Connected via:
+                                    <span id="node_ip"></span></p>
+                                </div>
+                                <div id="infoTut" class="sofTran" onclick="tutPop()">
+                                    <p>Launch Tutorial</p>
+                                </div>
+                            </div>
 
                             <br />
 
@@ -294,12 +316,12 @@
 
     <div id="spn_dashboard" style="display:none">
         <header class="cd-header">
-            <a href="http://www.supernet.org" class="cd-logo" target="_blank"><img src="spn/img/logo.png" alt="Logo"></a>
+            <a href="http://www.supernet.org" class="cd-logo" target="_blank"><img src="spn/img/logo.svg" alt="Logo"></a>
             <a id="top_menu_trigger" href="#0" class="cd-3d-nav-trigger">
                 Menu
                 <span></span>
             </a>
-            <a href="supernet.html" class="cd-log-out-trigger"><img src="spn/img/ico_logout.png" alt="Log out"></a>
+            <a href="supernet.html" class="cd-log-out-trigger"><img src="spn/img/ico_logout.svg" alt="Log out"></a>
             <div class='resp-fix'></div>
 
              <!-- News and Advertisement -->
@@ -385,7 +407,11 @@
                                 </li>
                                 <li>
                                     <a class="tooltip md-trigger" data-modal="modal-11" data-type="nxt" data-type2="coinops" data-i18n-tooltip="coin_operations" title="Coin operations">
-                                        <i class="fa fa-sign-outx fa-2x"></i>
+                                        <font style="visibility: hidden">
+                                            NXT|<br>
+                                            NXT|<br>
+                                            NXT|
+                                        </font>
                                     </a>
                                 </li>
                                 <li>
@@ -405,7 +431,7 @@
                         <h3>Bitcoin</h3>
                         <div class="coinaddr">
                             <h4 class="tooltip">--- Connecting ---</h4>
-			            </div>
+                        </div>
                         <h5><a href="#" class="tooltip md-trigger" data-i18n-tooltip="view_tx_history" title="View transaction history" data-modal="modal-tx-history">0</a></h5>
                         <div class="overboxBTC">
                             <ul>
@@ -420,7 +446,11 @@
                                 </li>
                                 <li>
                                     <a class="tooltip md-trigger" data-modal="modal-11" data-type="btc" data-type2="coinops" data-i18n-tooltip="coin_operations" title="Coin operations">
-                                        <i class="fa fa-sign-outx fa-2x"></i>
+                                        <font style="visibility: hidden">
+                                            BTC|<br>
+                                            BTC|<br>
+                                            BTC|
+                                        </font>
                                     </a>
                                 </li>
                                 <li>
@@ -458,7 +488,11 @@
 
                                 <li>
                                     <a class="tooltip md-trigger" data-modal="modal-11" data-type="btcd" data-type2="coinops" data-i18n-tooltip="coin_operations" title="Coin operations">
-                                        <i class="fa fa-sign-outx fa-2x"></i>
+                                        <font style="visibility: hidden">
+                                            BTD|<br>
+                                            BTD|<br>
+                                            BTD|
+                                        </font>
                                     </a>
                                 </li>
                                 <li>
@@ -493,7 +527,11 @@
                                 </li>
                                 <li>
                                     <a class="tooltip md-trigger" data-modal="modal-11" data-type="dash" data-type2="coinops" data-i18n-tooltip="coin_operations" title="Coin operations">
-                                        <i class="fa fa-sign-outx fa-2x"></i>
+                                        <font style="visibility: hidden">
+                                            DASH|<br>
+                                            DASH|<br>
+                                            DASH|
+                                        </font>
                                     </a>
                                 </li>
                                 <li>
@@ -529,7 +567,11 @@
 
                                 <li>
                                     <a class="tooltip md-trigger" data-modal="modal-11" data-type="doge" data-type2="coinops" data-i18n-tooltip="coin_operations" title="Coin operations">
-                                        <i class="fa fa-sign-outx fa-2x"></i>
+                                        <font style="visibility: hidden">
+                                            DO|<br>
+                                            DO|<br>
+                                            DO|
+                                        </font>
                                     </a>
                                 </li>
                                 <li>
@@ -565,7 +607,11 @@
                                 </li>
                                 <li>
                                     <a class="tooltip md-trigger" data-modal="modal-11" data-type="infx" data-type2="coinops" data-i18n-tooltip="coin_operations" title="Coin operations">
-                                        <i class="fa fa-sign-outx fa-2x"></i>
+                                        <font style="visibility: hidden">
+                                            INFX|<br>
+                                            INFX|<br>
+                                            INFX|
+                                        </font>
                                     </a>
                                 </li>
                                 <li>
@@ -600,7 +646,11 @@
                                 </li>
                                 <li>
                                     <a class="tooltip md-trigger" data-modal="modal-11" data-type="ltc" data-type2="coinops" data-i18n-tooltip="coin_operations" title="Coin operations">
-                                        <i class="fa fa-sign-outx fa-2x"></i>
+                                        <font style="visibility: hidden">
+                                            LTC|<br>
+                                            LTC|<br>
+                                            LTC|
+                                        </font>
                                     </a>
                                 </li>
                                 <li>
@@ -635,8 +685,11 @@
                                 </li>
                                 <li>
                                     <a class="tooltip md-trigger" data-modal="modal-11" data-type="opal" data-type2="coinops" data-i18n-tooltip="coin_operations" title="Coin operations">
-                                        <i class="fa fa-external-link fa-2x">
-                                        </i>
+                                        <font style="visibility: hidden">
+                                            OPL|<br>
+                                            OPA|<br>
+                                            PAL|
+                                        </font>
                                     </a>
                                 </li>
                                 <li>
@@ -667,7 +720,11 @@
                                 </li>
                                 <li>
                                     <a class="tooltip md-trigger" data-modal="modal-11" data-type="vrc" data-type2="coinops" data-i18n-tooltip="coin_operations" title="Coin operations">
-                                        <i class="fa fa-sign-outx fa-2x"></i>
+                                        <font style="visibility: hidden">
+                                            VRC|<br>
+                                            VRC|<br>
+                                            VRC|
+                                        </font>
                                     </a>
                                 </li>
                                 <li>
@@ -1070,7 +1127,7 @@ works with tutorials, WIKI links and more.">HELP</a>
 
                         <div class="commBox">
                             <div class="innerbox"></div>
-                            <img src="spn/img/proj_pangea.png" align="center" />
+                            <img src="spn/img/proj_pangea.svg" align="center" />
                             <a href="http://pangeapoker.net/" target="_blank">
                                 <div class="overBox">
                                     <div class="title overText">
@@ -1087,7 +1144,7 @@ works with tutorials, WIKI links and more.">HELP</a>
 
                         <div class="commBox">
                             <div class="innerbox"></div>
-                            <img src="spn/img/proj_skynet.png" align="center" />
+                            <img src="spn/img/proj_skynet.svg" align="center" />
                             <a href="http://www.finhive.com/" target="_blank">
                                 <div class="overBox">
                                     <div class="title overText">
@@ -1104,7 +1161,7 @@ works with tutorials, WIKI links and more.">HELP</a>
 
                         <div class="commBox">
                             <div class="innerbox"></div>
-                            <img src="spn/img/proj_cryptopanels.png" align="center" />
+                            <img src="spn/img/proj_cryptopanels.svg" align="center" />
                             <a href="http://cryptopanels.com" target="_blank">
                                 <div class="overBox">
                                     <div class="title overText" data-i18n="cryptopanels">
@@ -1122,7 +1179,7 @@ works with tutorials, WIKI links and more.">HELP</a>
 
                         <div class="commBox">
                             <div class="innerbox"></div>
-                            <img src="spn/img/proj_freemarket.png" align="center" />
+                            <img src="spn/img/proj_freemarket.svg" align="center" />
                             <a href="https://freemarketlite.cc/index.html" target="_blank">
                                 <div class="overBox">
                                     <div class="title overText" data-i18n="freemarket">
@@ -1139,7 +1196,7 @@ works with tutorials, WIKI links and more.">HELP</a>
 
                         <div class="commBox">
                             <div class="innerbox"></div>
-                            <img src="spn/img/proj_nxtvaultPH.png" align="center" />
+                            <img src="spn/img/proj_nxtvaultPH.svg" align="center" />
                             <a href="https://nxtforum.org/general-discussion/unveiling-the-new-nxtvault-secure-account-management-for-android-devices!-beta/" target="_blank">
                                 <div class="overBox">
                                     <div class="title overText">
@@ -1212,7 +1269,7 @@ works with tutorials, WIKI links and more.">HELP</a>
                         -->
                     </div>
                     <div class="md-button-wrapper full-wrapper">
-                        <button class="md-close md-close-img md-close-img-eth"><i class="fa fa-times"></i></button>
+                        <button class="md-close md-close-img md-close-img-eth"><img src="spn/img/md-close_btn.svg" /></button>
                     </div>
                     <!--<button class="md-close md-close-1">EXIT</button>-->
                 </div>
@@ -1230,7 +1287,7 @@ works with tutorials, WIKI links and more.">HELP</a>
 
                         <div class="commBox">
                             <div class="innerbox"></div>
-                            <img src="spn/img/serv_coinimal.spn" align="center" />
+                            <img src="spn/img/serv_coinimal.svg" align="center" />
                             <a href="https://coinimal.com" target="_blank">
                                 <div class="overBox">
                                     <div class="title overText">
@@ -1287,7 +1344,7 @@ works with tutorials, WIKI links and more.">HELP</a>
 
                     </div>
                     <div class="md-button-wrapper full-wrapper">
-                        <button class="md-close md-close-img md-close-img-eth"><i class="fa fa-times"></i></button>
+                        <button class="md-close md-close-img md-close-img-eth"><img src="spn/img/md-close_btn.svg" /></button>
                     </div>
                     <!--<button class="md-close md-close-1">EXIT</button>-->
                 </div>
@@ -1305,7 +1362,7 @@ works with tutorials, WIKI links and more.">HELP</a>
                         
                         <div class="commBox">
                             <div class="innerbox"></div>
-                            <img src="spn/img/comm_snwebsite.png" align="center" />
+                            <img src="spn/img/comm_snwebsite.svg" align="center" />
                             <a href="http://www.supernet.org/" target="_blank">
                                 <div class="overBox">
                                     <div class="title overText" data-i18n="supernet_official_website">
@@ -1324,7 +1381,7 @@ works with tutorials, WIKI links and more.">HELP</a>
                         
                         <div class="commBox">
                             <div class="innerbox"></div>
-                            <img src="spn/img/comm_snforum.png" align="center" />
+                            <img src="spn/img/comm_snforum.svg" align="center" />
                             <a href="http://forum.supernet.org/" target="_blank">
                                 <div class="overBox">
                                     <div class="title overText" data-i18n="supernet_official_forum">
@@ -1342,7 +1399,7 @@ works with tutorials, WIKI links and more.">HELP</a>
                         
                         <div class="commBox">
                             <div class="innerbox"></div>
-                            <img src="spn/img/comm_snirc.png" align="center" />
+                            <img src="spn/img/comm_snirc.svg" align="center" />
                             <a href="http://chat.supernet.org/" target="_blank">
                                 <div class="overBox">
                                     <div class="title overText">
@@ -1361,7 +1418,7 @@ works with tutorials, WIKI links and more.">HELP</a>
                         
                         <div class="commBox">
                             <div class="innerbox"></div>
-                            <img src="spn/img/comm_snslack.png" align="center" />
+                            <img src="spn/img/comm_snslack.svg" align="center" />
                             <a href="http://slackinvite.supernet.org" target="_blank">
                                 <div class="overBox">
                                     <div class="title overText">
@@ -1398,7 +1455,7 @@ works with tutorials, WIKI links and more.">HELP</a>
                         
                         <div class="commBox">
                             <div class="innerbox"></div>
-                            <img src="spn/img/comm_nxter.png" align="center" />
+                            <img src="spn/img/comm_nxter.svg" align="center" />
                             <a href="http://www.nxter.org" target="_blank">
                                 <div class="overBox">
                                     <div class="title overText">
@@ -1418,7 +1475,7 @@ works with tutorials, WIKI links and more.">HELP</a>
                         
                         <div class="commBox">
                             <div class="innerbox"></div>
-                            <img src="spn/img/comm_nxtforum.png" align="center" />
+                            <img src="spn/img/comm_nxtforum.svg" align="center" />
                             <a href="https://nxtforum.org/index.php" target="_blank">
                                 <div class="overBox">
                                     <div class="title overText">
@@ -1437,7 +1494,7 @@ works with tutorials, WIKI links and more.">HELP</a>
                         
                         <div class="commBox">
                             <div class="innerbox"></div>
-                            <img src="spn/img/comm_sntwitter.png" align="center" />
+                            <img src="spn/img/comm_sntwitter.svg" align="center" />
                             <a href="https://twitter.com/supernetorg" target="_blank">
                                 <div class="overBox">
                                     <div class="title overText">
@@ -1456,7 +1513,7 @@ works with tutorials, WIKI links and more.">HELP</a>
                         
                         <div class="commBox">
                             <div class="innerbox"></div>
-                            <img src="spn/img/comm_snnews.png" align="center" />
+                            <img src="spn/img/comm_snnews.svg" align="center" />
                             <div class="overBox">
                                 <div class="title overText" data-i18n="snnews">
                                     SNN - SuperNET News
@@ -1507,7 +1564,7 @@ works with tutorials, WIKI links and more.">HELP</a>
                 </div>
                     </div>
                     <div class="md-button-wrapper full-wrapper">
-                        <button class="md-close md-close-img md-close-img-eth"><i class="fa fa-times"></i></button>
+                        <button class="md-close md-close-img md-close-img-eth"><img src="spn/img/md-close_btn.svg" /></button>
                     </div>
                     <!--<button class="md-close md-close-1">EXIT</button>-->
                 </div>
@@ -1525,7 +1582,7 @@ works with tutorials, WIKI links and more.">HELP</a>
                         
                         <div class="commBox">
                             <div class="innerbox"></div>
-                            <img src="spn/img/help_tutorial.png" align="center" />
+                            <img src="spn/img/help_tutorial.svg" align="center" />
                             <a id="basic_gui_tutorial" href="#" class="md-trigger" data-modal="modal-16">
                                 <div class="overBox">
                                     <div class="title overText" data-i18n="basic_gui_tutorial">
@@ -1545,7 +1602,7 @@ works with tutorials, WIKI links and more.">HELP</a>
                         
                         <div class="commBox">
                             <div class="innerbox"></div>
-                            <img src="spn/img/help_wiki.png" align="center" />
+                            <img src="spn/img/help_wiki.svg" align="center" />
                             <a href="http://wiki.supernet.org/wiki/Main_Page" target="_blank">
                                 <div class="overBox">
                                     <div class="title overText" data-i18n="help_wiki">
@@ -1559,7 +1616,7 @@ works with tutorials, WIKI links and more.">HELP</a>
                         </div>
                     </div>
                     <div class="md-button-wrapper full-wrapper">
-                        <button class="md-close md-close-img md-close-img-eth"><i class="fa fa-times"></i></button>
+                        <button class="md-close md-close-img md-close-img-eth"><img src="spn/img/md-close_btn.svg" /></button>
                     </div>
                     <!--<button class="md-close md-close-1">EXIT</button>-->
                 </div>
@@ -1622,7 +1679,7 @@ works with tutorials, WIKI links and more.">HELP</a>
                         </div>
                     </div>
                     <div class="md-button-wrapper full-wrapper">
-                        <button class="md-close md-close-img md-close-img-2"><i class="fa fa-times"></i></button>
+                        <button class="md-close md-close-img md-close-img-2"><img src="spn/img/md-close_btn.svg" /></button>
                     </div>
                     <!--<button class="md-close md-close-1">EXIT</button>-->
                 </div>
@@ -1632,7 +1689,7 @@ works with tutorials, WIKI links and more.">HELP</a>
 
         <div class="md-overlay"></div><!-- the overlay element -->
         <div class="md-overlayfull"></div><!-- the overlay element -->
-		<a class="md-trigger" data-modal="modal-jay-code" style="visibility:hidden"></a>
+        <a class="md-trigger" data-modal="modal-jay-code" style="visibility:hidden"></a>
     </div>
 
     <div class="modal fade" id="tx_history_modal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -1731,7 +1788,7 @@ works with tutorials, WIKI links and more.">HELP</a>
         </div>
     </div>
 
-	<div class="md-modal md-effect md-full" id="modal-jay-code">
+    <div class="md-modal md-effect md-full" id="modal-jay-code">
         <div class="md-content">
             <h3 data-i18n="jay_wallet_code">Jay Wallet Code</h3>
             <div>
@@ -1741,7 +1798,7 @@ works with tutorials, WIKI links and more.">HELP</a>
                     <span id="jay_code"></span>
                 </div>
                 <div class="md-button-wrapper full-wrapper">
-                    <button class="md-close md-close-img"><i class="fa fa-times"></i></button>
+                    <button class="md-close md-close-img"><img src="spn/img/md-close_btn.svg" /></button>
                 </div>
             </div>
         </div>
@@ -1751,7 +1808,7 @@ works with tutorials, WIKI links and more.">HELP</a>
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h3 class="modal-title">Nxt Asset Exchange</h3>
                 </div>
                 <div class="modal-body">
@@ -1972,14 +2029,14 @@ works with tutorials, WIKI links and more.">HELP</a>
     </div>
 
     
-	
+    
     <div id="testnet_warning" style="display:none;position:fixed;bottom:0;left:0;padding:5px;background:red;color:white;border-top-right-radius:5px;" data-i18n="[html]testnet_warning"><strong>Warning</strong>: You are connected to the TestNet. Do not use your real passphrase!</div>
 
 <!-- ------------------ blockchain download bar ------------------ -->
 
     <div id="snLoader" style="display:none">
         <div id="snLoaderLogoWrap">
-            <img id="snLoaderLogo" src="spn/img/superNETlogosymbolonly.png" />
+            <img id="snLoaderLogo" src="spn/img/superNETlogosymbolonly.svg" />
         </div>
         <div id="snLoaderTxt" align="center">
             <span data-i18n="downloading_blockchain">Downloading Blockchain</span> (<span class="blocks_left"></span>)
@@ -2011,15 +2068,15 @@ works with tutorials, WIKI links and more.">HELP</a>
     <script src="js/3rdparty/bootstrap.js" type="text/javascript"></script>
     <script src="js/3rdparty/i18next.js" type="text/javascript"></script>
     <script src="spn/js/translation/en.js"></script>
-	<script src="spn/js/translation/zh-cn.js"></script>
+    <script src="spn/js/translation/zh-cn.js"></script>
     <script src="spn/js/translation/ru.js"></script>
-	<script src="spn/js/translation/es-es.js"></script>
+    <script src="spn/js/translation/es-es.js"></script>
     <script type="text/javascript">
         var resources = {
             en: { translation: NRS.translate1en },
             'zh-cn': { translation: NRS.translate1zhcn },
             ru: { translation: NRS.translate1ru },
-			'es-es': { translation: NRS.translate1eses }
+            'es-es': { translation: NRS.translate1eses }
         };
 
         $.i18n.init({
@@ -2116,7 +2173,7 @@ works with tutorials, WIKI links and more.">HELP</a>
 
             $('.tooltip').tooltipster({
                 delay: 1200,
-				position: 'bottom'
+                position: 'bottom'
             });
 
             setTimeout(function () {
@@ -2128,17 +2185,17 @@ works with tutorials, WIKI links and more.">HELP</a>
             }, 500);
         });
     </script>
-	<script>
-		function tutPop(url, title, w, h) {
-			var url = "spn/tutorial/1/index.html";
-			var title = "superNET Tutorial";
-			var w = "550";
-			var h = "450";
-			var left = (screen.width/2)-(w/2);
-			var top = (screen.height/2)-(h/2);
-			return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
-		} 
-	</script>
+    <script>
+        function tutPop(url, title, w, h) {
+            var url = "spn/tutorial/1/index.html";
+            var title = "superNET Tutorial";
+            var w = "550";
+            var h = "450";
+            var left = (screen.width/2)-(w/2);
+            var top = (screen.height/2)-(h/2);
+            return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+        } 
+    </script>
 
 </body>
 </html>
