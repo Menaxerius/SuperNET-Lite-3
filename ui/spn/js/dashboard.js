@@ -1439,7 +1439,15 @@ var NRS = (function (NRS, $, undefined) {
             maxFractionLength = resultCoinDetails[0].decimal;
         }
 
-        //Check coin send amount
+        var address = $("#field114cont").val();
+        var multisig = false;
+        //Check if recipient is NXT account
+        if(address[0] === 'N' || coin === 'NXT') {
+            multisig = true;
+            $("#show_min_amount_info").hide();
+            $("#minimum_amount_info").html('Ok.');
+        } else {
+            //Check coin send amount
         switch(coin) {
             case 'BTC':
                 if($(this).val() <= 0.01) {
@@ -1519,6 +1527,9 @@ var NRS = (function (NRS, $, undefined) {
             break;
 
         }
+        }
+
+        
 
         if($(this).val() > resultCoinDetails[0].maxWithdraw) {
             $(this).val(resultCoinDetails[0].maxWithdraw);
