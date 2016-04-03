@@ -33,6 +33,7 @@ var NRS = (function (NRS, $, undefined) {
     //{ "coin": "BITS", "bridge": "http://"+serverBTC[randomBTC], "msigAddr": "" },
     { "coin": "OPAL", "bridge": "http://"+serverBTC[randomBTC], "msigAddr": "" },
     { "coin": "VRC", "bridge": "http://"+serverBTC[randomBTC], "msigAddr": "" },
+    { "coin": "DASH", "bridge": "http://"+serverBTC[randomBTC], "msigAddr": "" },
     { "coin": "INFX", "bridge": "http://"+serverBTC[randomBTC], "msigAddr": "" }
     //{ "coin": "VPN", "bridge": "http://178.63.60.131", "msigAddr": "" }
     ];
@@ -44,7 +45,8 @@ var NRS = (function (NRS, $, undefined) {
     { "coin": "BTCD", "assetID": "6918149200730574743", "decimal": 4, "depositConfirmation": "10", "balance": 0, "minWithdraw": 0.5,"maxWithdraw": 999, "minDeposit": 0.5 },
     { "coin": "VRC", "assetID": "9037144112883608562", "decimal": 8, "depositConfirmation": "10", "balance": 0, "minWithdraw": 50,"maxWithdraw": 49999, "minDeposit": 50 },
     { "coin": "OPAL", "assetID": "6775076774325697454", "decimal": 8, "depositConfirmation": "6", "balance": 0, "minWithdraw": 50,"maxWithdraw": 999999, "minDeposit": 50 },
-    { "coin": "INFX", "assetID": "5378783389140157313", "decimal": 4, "depositConfirmation": "6", "balance": 0, "minWithdraw": 50,"maxWithdraw": 999999, "minDeposit": 50 }
+    { "coin": "INFX", "assetID": "5378783389140157313", "decimal": 4, "depositConfirmation": "6", "balance": 0, "minWithdraw": 50,"maxWithdraw": 999999, "minDeposit": 50 },
+    { "coin": "DASH", "assetID": "12802188892402337671", "decimal": 4, "depositConfirmation": "10", "balance": 0, "minWithdraw": 0.5,"maxWithdraw": 999999, "minDeposit": 0.1 }
     //{ "coin": "BITS", "assetID": "13120372057981370228", "decimal": 6, "depositConfirmation": "20", "balance": 0, "minWithdraw": 500,"maxWithdraw": 480000, "minDeposit": 500 }
     //{ "coin": "VPN", "assetID": "7734432159113182240", "decimal": 4, "depositConfirmation": "10", "balance": 0, "minWithdraw": 5000,"maxWithdraw": 80000, "minDeposit": 5000 }
     ];
@@ -56,6 +58,7 @@ var NRS = (function (NRS, $, undefined) {
     { "coin": "BTCD", "accountRS": "NXT-8RQH-HFUP-3AJ9-E2DB9" },
     { "coin": "VRC", "accountRS": "NXT-8RQH-HFUP-3AJ9-E2DB9" },
     { "coin": "OPAL", "accountRS": "NXT-8RQH-HFUP-3AJ9-E2DB9" },
+    { "coin": "DASH", "accountRS": "NXT-8RQH-HFUP-3AJ9-E2DB9" },
     { "coin": "INFX", "accountRS": "NXT-8RQH-HFUP-3AJ9-E2DB9" }
     //{ "coin": "BITS", "accountRS": "NXT-8RQH-HFUP-3AJ9-E2DB9" }
     //{ "coin": "VPN", "accountRS": "NXT-8RQH-HFUP-3AJ9-E2DB9" }
@@ -68,7 +71,8 @@ var NRS = (function (NRS, $, undefined) {
     { "coin": "BTCD", "server": ["NXT-M3PZ-B7U2-359G-4VXAJ", "NXT-4R55-GPLW-DRYV-HMVEK", "NXT-PPPK-GBAU-6U4V-9NSMX", "NXT-XXQB-S9RV-AZB4-9N4BB"] },
     { "coin": "VRC", "server": ["NXT-M3PZ-B7U2-359G-4VXAJ", "NXT-4R55-GPLW-DRYV-HMVEK", "NXT-PPPK-GBAU-6U4V-9NSMX", "NXT-XXQB-S9RV-AZB4-9N4BB"] },
     { "coin": "OPAL", "server": ["NXT-M3PZ-B7U2-359G-4VXAJ", "NXT-4R55-GPLW-DRYV-HMVEK", "NXT-PPPK-GBAU-6U4V-9NSMX", "NXT-XXQB-S9RV-AZB4-9N4BB"] },
-    { "coin": "INFX", "server": ["NXT-M3PZ-B7U2-359G-4VXAJ", "NXT-4R55-GPLW-DRYV-HMVEK", "NXT-PPPK-GBAU-6U4V-9NSMX", "NXT-XXQB-S9RV-AZB4-9N4BB"] }
+    { "coin": "INFX", "server": ["NXT-M3PZ-B7U2-359G-4VXAJ", "NXT-4R55-GPLW-DRYV-HMVEK", "NXT-PPPK-GBAU-6U4V-9NSMX", "NXT-XXQB-S9RV-AZB4-9N4BB"] },
+    { "coin": "DASH", "server": ["NXT-M3PZ-B7U2-359G-4VXAJ", "NXT-4R55-GPLW-DRYV-HMVEK", "NXT-PPPK-GBAU-6U4V-9NSMX", "NXT-XXQB-S9RV-AZB4-9N4BB"] }
     //{ "coin": "BITS", "server": ["NXT-M3PZ-B7U2-359G-4VXAJ", "NXT-4R55-GPLW-DRYV-HMVEK", "NXT-PPPK-GBAU-6U4V-9NSMX", "NXT-XXQB-S9RV-AZB4-9N4BB"] }
     //{ "coin": "VPN", "server": ["NXT-M3PZ-B7U2-359G-4VXAJ", "NXT-4R55-GPLW-DRYV-HMVEK", "NXT-PPPK-GBAU-6U4V-9NSMX", "NXT-XXQB-S9RV-AZB4-9N4BB"] }
     ];
@@ -82,6 +86,7 @@ var NRS = (function (NRS, $, undefined) {
     var gateWayBTCD = [false, false, false];
     var gateWayVRC = [false, false, false];
     var gateWayINFX = [false, false, false];
+    var gateWayDASH = [false, false, false];
 
     NRS.setSuperNETPassword = function (password) {
         _password = password;
@@ -898,32 +903,36 @@ var NRS = (function (NRS, $, undefined) {
                 txfee = 0.0001;
             break;
             case 'LTC':
-                NXTfee_equiv = 0.004;
+                NXTfee_equiv = 0.0075;
                 txfee = 0.001;
             break;
             case 'DOGE':
-                NXTfee_equiv = 70;
+                NXTfee_equiv = 108;
                 txfee = 3;
             break;
             case 'BTCD':
-                NXTfee_equiv = 0.01;
+                NXTfee_equiv = 0.018;
                 txfee = 0.001;
             break;
             case 'VRC':
-                NXTfee_equiv = 1;
+                NXTfee_equiv = 0.48;
                 txfee = 0.001;
             break;
             case 'OPAL':
-                NXTfee_equiv = 1;
+                NXTfee_equiv = 45;
                 txfee = 0.01;
             break;
             case 'INFX':
-                NXTfee_equiv = 1;
-                txfee = 0.01;
+                NXTfee_equiv = 0.6;
+                txfee = 0.001;
             break;
             case 'BITS':
                 NXTfee_equiv = 10;
                 txfee = 0.01;
+            break;
+            case 'DASH':
+                NXTfee_equiv = 0.00333;
+                txfee = 0.001;
             break;
 
         }
@@ -996,6 +1005,7 @@ var NRS = (function (NRS, $, undefined) {
         }
         if(multisig) {
             $("#withdraw_fees").html('');
+            $("#prev_nxtfee").html('1 NXT');
         } else {
             var withdraw_amount = $("#field113cont").val();
             var fees = calculateFee(coin, withdraw_amount);
@@ -1003,6 +1013,7 @@ var NRS = (function (NRS, $, undefined) {
             var total_withdraw = withdraw_amount - fees;
 
             $("#withdraw_fees").html('Recipient account will receive: <br>'+total_withdraw + ' '+coin);
+            $("#prev_nxtfee").html('2 NXT');
         }
 
     });
@@ -1407,8 +1418,12 @@ var NRS = (function (NRS, $, undefined) {
     });
 
 
+
+
     $("#field113cont").keydown(function (e) {
+
         var coin = getModalCoin($("#modal-11"));
+
         var resultCoinDetails = $.grep(_coin, function (coinD) { return coinD.coin == coin.toUpperCase() });
 
         var charCode = !e.charCode ? e.which : e.charCode;
@@ -1424,6 +1439,86 @@ var NRS = (function (NRS, $, undefined) {
             maxFractionLength = resultCoinDetails[0].decimal;
         }
 
+        //Check coin send amount
+        switch(coin) {
+            case 'BTC':
+                if($(this).val() <= 0.01) {
+                    $("#show_min_amount_info").show();
+                    $("#minimum_amount_info").html('Please send more than 0.01 BTC');
+                } else {
+                    $("#show_min_amount_info").hide();
+                    $("#minimum_amount_info").html('Ok.');
+                }
+            break;
+            case 'LTC':
+                if($(this).val() <= 0.5) {
+                    $("#show_min_amount_info").show();
+                    $("#minimum_amount_info").html('Please send more than 0.5 LTC');
+                } else {
+                    $("#show_min_amount_info").hide();
+                    $("#minimum_amount_info").html('Ok.');
+                }
+            break;
+            case 'NXT':
+                $("#show_min_amount_info").hide();
+                $("#minimum_amount_info").html('Ok.');
+            break;
+            case 'BTCD':
+                if($(this).val() <= 0.5) {
+                    $("#show_min_amount_info").show();
+                    $("#minimum_amount_info").html('Please send more than 0.5 BTCD');
+                } else {
+                    $("#show_min_amount_info").hide();
+                    $("#minimum_amount_info").html('Ok.');
+                }
+            break;
+            case 'DASH':
+                if($(this).val() <= 0.5) {
+                    $("#show_min_amount_info").show();
+                    $("#minimum_amount_info").html('Please send more than 0.5 DASH');
+                } else {
+                    $("#show_min_amount_info").hide();
+                    $("#minimum_amount_info").html('Ok.');
+                }
+            break;
+            case 'DOGE':
+                if($(this).val() <= 5000) {
+                    $("#show_min_amount_info").show();
+                    $("#minimum_amount_info").html('Please send more than 5000 DOGE');
+                } else {
+                    $("#show_min_amount_info").hide();
+                    $("#minimum_amount_info").html('Ok.');
+                }
+            break;
+            case 'INFX':
+                if($(this).val() <= 10) {
+                    $("#show_min_amount_info").show();
+                    $("#minimum_amount_info").html('Please send more than 10 INFX');
+                } else {
+                    $("#show_min_amount_info").hide();
+                    $("#minimum_amount_info").html('Ok.');
+                }
+            break;
+            case 'OPAL':
+                if($(this).val() <= 1000) {
+                    $("#show_min_amount_info").show();
+                    $("#minimum_amount_info").html('Please send more than 1000 OPAL');
+                } else {
+                    $("#show_min_amount_info").hide();
+                    $("#minimum_amount_info").html('Ok.');
+                }
+            break;
+            case 'VRC':
+                if($(this).val() <= 10) {
+                    $("#show_min_amount_info").show();
+                    $("#minimum_amount_info").html('Please send more than 10 VRC');
+                } else {
+                    $("#show_min_amount_info").hide();
+                    $("#minimum_amount_info").html('Ok.');
+                }
+            break;
+
+        }
 
         if($(this).val() > resultCoinDetails[0].maxWithdraw) {
             $(this).val(resultCoinDetails[0].maxWithdraw);

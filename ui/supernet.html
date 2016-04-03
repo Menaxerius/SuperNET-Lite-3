@@ -879,11 +879,20 @@ works with tutorials, WIKI links and more.">HELP</a>
                         </li>
                         <li>
                             <div class="input_label">
-                                <p data-i18n="amount">Amount</p>
+                                <p data-i18n="amount">Error</p>
                             </div>
                             <div class="input_field input-group">
                                 <input type="text" class="input_type" id="field113cont">
                                 <span class="input-group-addon"></span>
+
+                            </div>
+                        </li>
+                        <li id="show_min_amount_info" style="display:hidden">
+                            <div class="input_label">
+                                <p data-i18n="amount">Warning</p>
+                            </div>
+                            <div class="input_field" style="padding-top: 5px">
+                                <span id="minimum_amount_info"></span>
                             </div>
                         </li>
                         <li>
@@ -891,7 +900,7 @@ works with tutorials, WIKI links and more.">HELP</a>
                                 <p data-i18n="fees">Fees</p>
                             </div>
                             <div class="input_field" style="padding-top: 5px">
-                                <span>2 NXT, or 1 NXT for SuperNET/Nxt recipient accounts</span><br>
+                                <span id="prev_nxtfee">2 NXT</span><hr>
                                 <span id="withdraw_account_info"></span> <span id="withdraw_fees"></span>
                             </div>
                         </li>
