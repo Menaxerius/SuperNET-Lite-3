@@ -83,6 +83,10 @@
 	-webkit-transition: 0.3s;
 }
 
+object {
+	pointer-events: none;
+}
+
 /* ======================= END OF LANGUAGE SELECTOR AREA ======================= */
 /* ========================= MAIN LOGIN AREA SETTINGS ========================= */
 
@@ -247,5 +251,7 @@ input[type="checkbox"].spn {
 	#spn_logo {
 	margin-bottom: 15px;
 	}
+
+}
 	
 }
