@@ -1,5 +1,5 @@
 var NRS = (function (NRS, $, undefined) {
-    NRS.spnliteversion = "2.0.9";
+    NRS.spnliteversion = "3.0.6";
     NRS.isJay = false;
     var server = "http://localhost:7876"; /*http://localhost:7876*/
     var peerExplorerUrl = "http://peerexplorer.com/api_openapi_hallmark_version_jsonp";
@@ -46,6 +46,7 @@ var NRS = (function (NRS, $, undefined) {
             });
         }
         else {
+
             if (result) {
                 if (result.length == 0) {
 
@@ -242,6 +243,10 @@ var NRS = (function (NRS, $, undefined) {
             $(".bgopal h4").css('visibility', 'hidden');
             $(".bgvrc h4").css('visibility', 'hidden');
         }
+    }
+
+    NRS.isSuperNETPage = function() {
+        return false;
     }
 
     NRS.listJayAccounts = function () {

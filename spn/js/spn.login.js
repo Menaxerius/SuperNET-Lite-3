@@ -126,6 +126,7 @@ var NRS = (function(NRS, $, undefined) {
 		}
 	}
 
+
 	$("#account_phrase_custom_panel form").submit(function(event) {
 		event.preventDefault()
 

@@ -1,5 +1,5 @@
 var NRS = (function (NRS, $, undefined) {
-    NRS.spnliteversion = "2.0.9";
+    NRS.spnliteversion = "3.0.6";
     NRS.isJay = false;
     var server = "http://localhost:7876"; /*http://localhost:7876*/
     var peerExplorerUrl = "http://peerexplorer.com/api_openapi_hallmark_version_jsonp";
@@ -251,9 +251,6 @@ var NRS = (function (NRS, $, undefined) {
                 $("#login_password").hide();
                 NRS.loadJayAccounts();
             }
-            else {
-                $("#login_password").show();
-            }
             
             $("#login_button").hide();
             $("#import_nxt").show();
@@ -308,6 +305,20 @@ var NRS = (function (NRS, $, undefined) {
 
     function clearJayAccountList() {
         $("#jay_account_list").html("");
+    }
+
+    NRS.getURLfilename = function () {
+        var url = window.location.pathname;
+        return url.substring(url.lastIndexOf('/') + 1).toLowerCase();
+    };
+
+    NRS.isSuperNETPage = function () {
+        if(NRS.getURLfilename() == "supernet.html"){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     
 	return NRS;

@@ -506,7 +506,7 @@ var NRS = (function (NRS, $, undefined) {
         }
     }
 
-    $(".md-close-1").on('click', function () {
+    $(".md-close-1").on('hidden.bs.modal', function () {
 
         $("#minimum_amount_info").html('');
         $("#show_min_amount_info").hide();
