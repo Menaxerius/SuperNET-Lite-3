@@ -186,11 +186,11 @@ var NRS = (function (NRS, $, undefined) {
     NRS.checkSuperNETVersion = function() {
 
         NRS.sendRequest("getAlias", {
-            aliasName: 'SuperNETLiteVersion'
+            aliasName: 'SuperNETLite3'
         }, function (response) {
 
             if (response.aliasName) {
-                if(response.accountRS == 'NXT-XGNC-YULH-4WR6-HW3R2') {
+                if(response.accountRS == 'NXT-CJQ9-7CAG-8FW4-7F9P8') {
 
                     NRS.officialVersion = response.aliasURI;
 
