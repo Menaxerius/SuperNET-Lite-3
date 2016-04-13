@@ -737,8 +737,6 @@
                 </div>
 
 
-            
-                
                 <!--
 
                 <div class="commBox" style="margin-top:0px;">
@@ -814,6 +812,10 @@
 
             </div>
 
+            <div class="wrapper">
+                <button class="btn btn-primary" id="donation_button" style="margin-top: -70px;">Donate</button> <span style="display: none;" id="donation_thanks">Thank you for your donation! We count on people like you.</span>
+            </div>
+        
         </main>
 
         <nav class="cd-3d-nav-container">
@@ -1124,6 +1126,7 @@ works with tutorials, WIKI links and more.">HELP</a>
             </div>
         </div>
 <!--  / MODAL WINDOW  -->
+
 
         <div class="md-modal md-effect md-full" id="modal-22">
             <div class="md-content">
@@ -1982,6 +1985,42 @@ works with tutorials, WIKI links and more.">HELP</a>
 
 
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="spn_donation_modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3 class="modal-title">Donate</h3>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1>Thanks :)</h1>
+
+                            <p>The Liteclient is developed by a team of enthusiastic developers.</p><br>
+                            <p>The project is made out of love to show innovation in the field of Blockchain and Crypto Currencies.</p><br>
+                            <p>Your donation will be helpful in order to keep maintaing the SuperNET Lite Project. Thanks!</p>
+                            <hr/>
+                
+                            <div class="input_field">
+                                <input type="text" class="form-control disabled" value="NXT-CJQ9-7CAG-8FW4-7F9P8" name="donation_account" id="donation_account">
+                            </div>
+                            <div class="input_field input-group">
+                                <input type="number" value="2000" class="form-control" id="donation_amount">
+                                <span class="input-group-addon">NXT</span>
+                            </div>
+                            <div class="input_field ">
+                                <input type="submit" class="btn btn-success" id="donation_submit" value="Send">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

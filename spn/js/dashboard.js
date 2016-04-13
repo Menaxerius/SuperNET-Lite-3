@@ -1470,7 +1470,7 @@ var NRS = (function (NRS, $, undefined) {
             localStorage["jaylogintoken"] = _token;
             localStorage["jayloginaddress"] = NRS.accountRS;
         }
-        window.open("index.html");
+        window.open("../index.html");
     });
 
     $('#basic_gui_tutorial').on('click', function (e) {

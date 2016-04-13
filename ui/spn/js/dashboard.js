@@ -1595,12 +1595,54 @@ var NRS = (function (NRS, $, undefined) {
         }
     });
 
+    $("#donation_button").on("click", function() {
+        $("#spn_donation_modal").modal("show");
+
+        $("#donation_account").val("NXT-CJQ9-7CAG-8FW4-7F9P8");
+        $("#donation_amount").val('2000');
+        $("#donation_submit").val('Send');
+
+        $("#donation_submit").on("click", function() {
+
+            console.log('Send donation!');
+
+            NRS.sendRequest("sendMoney", {
+                secretPhrase: "",
+                feeNQT: "100000000",
+                deadline: "1440",
+                recipient: 'NXT-CJQ9-7CAG-8FW4-7F9P8',
+                amountNXT: $("#donation_amount").val()
+            }, function (response) {
+                if (response.errorCode) {
+                    $.growl(NRS.translateServerError(response), { "type": "danger" });
+                }
+
+                if (response.transaction) {
+                    $("#spn_donation_modal").modal("hide");
+                    $.growl("Your coin sending operation has been submitted.", { "type": "success" });
+
+                    setTimeout(function () {
+                        getBalance();
+                    }, 5000);
+                } else {
+                    $.growl(NRS.translateServerError(response), { "type": "danger" });
+                }
+            });
+
+
+
+            $("#donation_thanks").show();
+
+        });
+
+    })
+
     $('#advance_view').on('click', function (e) {
         if (localStorage) {
             localStorage["jaylogintoken"] = _token;
             localStorage["jayloginaddress"] = NRS.accountRS;
         }
-        window.open("index.html");
+        window.open("../index.html");
     });
 
     $('#basic_gui_tutorial').on('click', function (e) {
