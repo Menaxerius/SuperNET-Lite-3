@@ -506,7 +506,7 @@ var NRS = (function (NRS, $, undefined) {
         }
     }
 
-    $(".md-close-1").on('hidden.bs.modal', function () {
+    $(".md-close-1").on('click', function () {
 
         $("#minimum_amount_info").html('');
         $("#show_min_amount_info").hide();
@@ -1338,7 +1338,7 @@ var NRS = (function (NRS, $, undefined) {
         if (coin == "NXT") {
             sentNXT();
         }
-        else if (coin == "BTC" || coin == "LTC" || coin == "DOGE" || coin == "BTCD" || coin == "VRC" || coin == "OPAL" || coin == "INFX" || coin == "BITS" || coin == "VPN") {
+        else if (coin == "BTC" || coin == "LTC" || coin == "DOGE" || coin == "BTCD" || coin == "VRC" || coin == "OPAL" || coin == "INFX" || coin == "BITS" || coin == "VPN" || coin == "DASH") {
 
             if(recipient === 'no') {
                 sentMGWcoin(coin);
