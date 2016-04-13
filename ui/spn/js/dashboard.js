@@ -506,6 +506,12 @@ var NRS = (function (NRS, $, undefined) {
         }
     }
 
+    $(".md-close-1").on('click', function () {
+
+        $("#minimum_amount_info").html('');
+        $("#show_min_amount_info").hide();
+    });
+
     function sentMGWcoin(coin) {
         var message = '{"withdrawaddr":"' + $.trim($("#field114cont").val()) + '"}';
         var coinDetails = $.grep(_coin, function (coinD) { return coinD.coin == coin });
