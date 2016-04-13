@@ -1101,26 +1101,45 @@ works with tutorials, WIKI links and more.">HELP</a>
         <div class="md-modal md-effect md-full" id="modal-21">
             <div class="md-content">
                 <h3 data-i18n="Nxt Details">Nxt Account Details</h3>
-                <div>
-                    Your Nxt Account:
-                    <br>
-                    <table class="table">
-                        <thead>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>AccountRS</td>
-                                <td><span id="nxt_details_account_rs"></span></td>
-                            </tr>
-                            <tr>
-                                <td>PublicKey</td>
-                                <td><span id="nxt_details_publicKey"></span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div clas="wrapper">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        
+                        <div class="col-md-10" style="padding-left: 100px;">
+                            <h1><u>Your Nxt Account</u></h1>
+                            <br>
+                            <table class="table">
+                                <thead>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>AccountRS</td>
+                                        <td><span id="nxt_details_account_rs"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PublicKey</td>
+                                        <td><span id="nxt_details_publicKey"></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/><br/>
+                            <h1><u>Private Key</u></h1>
+                            <p>Your private Key is your secret passphrase of the Nxt Account holding your Assets and curencies</p>
+                            <p>Just note the private key in order to write it down securely, never share this key with a person you do not trust!</p>
+                            <button class="btn btn-primary" id="showPrivateKey">Show private Key</button>
+
+                            <div id="privateKey" style="display:none;">
+                                <hr/>
+                                <input type="text" class="form-control" id="privateKey_display" disabled>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
                     <div style="clear: both;height:20px;"></div>
                     <div class="md-button-wrapper">
-                        <button class="md-close md-close-1" data-i18n="close">CLOSE</button>
+                        <button class="md-close md-close-1" id="close_nxt_modal" data-i18n="close">CLOSE</button>
                     </div>
                 </div>
             </div>

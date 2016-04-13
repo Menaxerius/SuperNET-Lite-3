@@ -1677,6 +1677,26 @@ var NRS = (function (NRS, $, undefined) {
         $("#node_ip_div").toggle();
     });
 
+    $("#showPrivateKey").on("click", function() {
+
+        $("#privateKey_display").val(_password);
+
+        $("#privateKey").toggle();
+
+
+    });
+
+    $("#modal-21").on('hidden', function () {
+
+        $("#privateKey_display").val('');
+        $("#privateKey").hide();
+
+    });
+
+    $("#close_nxt_modal").on("click", function() {
+        $("#privateKey_display").val('');
+        $("#privateKey").hide();
+    });
 
     return NRS;
 }(NRS || {}, jQuery));
