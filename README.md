@@ -15,11 +15,12 @@ Run the supernet.exe
 
 ##Linux
 
-start with ./supernet
+
+Open a terminal window in the SuperNET Lite folder and start it with ./supernet
 
 ##Mac
 
-Open the Terminal in the supernet lite folder and type ./supernet_mac
+Open the Terminal in the SuperNET Lite folder and type ./supernet_mac
 
 ##Node
 
