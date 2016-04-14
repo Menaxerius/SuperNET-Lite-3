@@ -209,9 +209,87 @@ var NRS = (function(NRS, $, undefined) {
 		$("#dgs_search_account_center").mask("NXT-****-****-****-*****");
 
 		if (NRS.getUrlParameter("account")){
-			NRS.login(false,NRS.getUrlParameter("account"));
+
+
+			if (localStorage) {
+	            if (localStorage.hasOwnProperty("jaylogintoken") && localStorage.hasOwnProperty("jayloginaddress")) {
+	                var address = localStorage["jayloginaddress"];
+	                var account = findAccount(address);
+
+	                var password = decryptSecretPhrase(account.cipher, localStorage["jaylogintoken"], account.checksum);
+
+	                localStorage.removeItem("jaylogintoken");
+	                localStorage.removeItem("jayloginaddress");
+
+	                console.log(password);
+
+	                if (password) {
+	                    
+	                    setTimeout(function () {
+                    		NRS.rememberPassword = true;
+							NRS.setPassword(password);
+	                        NRS.login(true,password);
+	                    }, 1000);
+	                }
+	            } else {
+
+					NRS.login(false,NRS.getUrlParameter("account"));
+	            }
+	        } else {
+        		NRS.login(false,NRS.getUrlParameter("account"));
+	        }
+
 		}
 	};
+
+	//JAY FUNCTIONS
+
+	var _hash = {
+		init: SHA256_init,
+		update: SHA256_write,
+		getBytes: SHA256_finalize
+	};
+
+	function findAccount(address) {
+        if (localStorage) {
+            var accounts = JSON.parse(localStorage["accounts"]);
+            if (accounts && accounts.length > 0) {
+                for (var a = 0; a < accounts.length; a++) {
+                    if (accounts[a]["accountRS"] == address) return accounts[a];
+                }
+            }
+        }
+
+        return false;
+    }
+
+    function decryptSecretPhrase(cipher, key, checksum) {
+        var rkey = prepKey(key);
+        var data = CryptoJS.AES.decrypt(cipher, rkey);
+
+        if (converters.byteArrayToHexString(simpleHash(converters.hexStringToByteArray(data.toString()))) == checksum)
+            return converters.hexStringToString(data.toString());
+        else return false;
+    }
+
+    function prepKey(key) {
+        var rounds = 1000;
+        var digest = key;
+        for (var i = 0; i < rounds; i++) {
+            digest = converters.byteArrayToHexString(simpleHash(digest));
+        }
+        return digest;
+    }
+
+    function simpleHash(message) {
+		_hash.init();
+		_hash.update(message);
+		return _hash.getBytes();
+	}
+
+	// END JAY FUNCTIONS
+
+
 
 	function _fix() {
 		var height = $(window).height() - $("body > .header").height();
