@@ -17,6 +17,10 @@ Run the supernet.exe
 
 start with ./supernet
 
+##Mac
+
+Open the Terminal and type ./supernet_mac
+
 ##Node
 
 node server.js
