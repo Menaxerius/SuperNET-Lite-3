@@ -23,7 +23,15 @@ Open the Terminal in the supernet lite folder and type ./supernet_mac
 
 ##Node
 
+Install nodejs
+
 node server.js
+
+Ubuntu
+
+sudo apt-get update
+sudo apt-get install nodejs
+nodejs server.js
 
 #How to start?
 
