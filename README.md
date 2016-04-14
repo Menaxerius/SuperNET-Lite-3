@@ -19,7 +19,7 @@ start with ./supernet
 
 ##Mac
 
-Open the Terminal and type ./supernet_mac
+Open the Terminal in the supernet lite folder and type ./supernet_mac
 
 ##Node
 
