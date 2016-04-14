@@ -221,8 +221,6 @@ var NRS = (function(NRS, $, undefined) {
 	                localStorage.removeItem("jaylogintoken");
 	                localStorage.removeItem("jayloginaddress");
 
-	                console.log(password);
-
 	                if (password) {
 	                    
 	                    setTimeout(function () {
