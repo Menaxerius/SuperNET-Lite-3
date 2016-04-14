@@ -34,6 +34,29 @@ var NRS = (function (NRS, $, undefined) {
         NRS.assetIds = [];
         NRS.storageSelect("assets", null, function (error, assets) {
             //select already bookmarked assets
+
+            console.log(assets);
+
+            if(assets.length < 4) {
+
+                var assetArray = [ "12659653638116877017", "125609428220063838", "16344939950195952527", "6918149200730574743", "9037144112883608562", "6775076774325697454", "5378783389140157313", "12802188892402337671" ];
+
+                $.each(assetArray, function(assetKey, assetValue) {
+
+                    console.log(assetValue);
+                        
+                    NRS.sendRequest("getAsset", {
+                        "asset": assetValue
+                    }, function (response) {
+
+                        console.log(response);
+                        NRS.saveAssetBookmarks(new Array(response));
+                        
+                    });
+
+                });
+            }
+
             $.each(assets, function (index, asset) {
                 NRS.cacheAsset(asset);
             });
