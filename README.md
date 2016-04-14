@@ -31,7 +31,9 @@ node server.js
 Ubuntu
 
 sudo apt-get update
+
 sudo apt-get install nodejs
+
 nodejs server.js
 
 #How to start?
