@@ -57,9 +57,9 @@ var ModalEffects = (function() {
 				// Add Type
 				if (type || type2) {
 					if (!type2) {
-						head.prop('src','spn/img/mod_topbar_'+type+'.svg');
+						head.prop('src','spn/img/mod_topbar_'+type+'.png');
 					} else {
-						head.prop('src','spn/img/mod_topbar_'+type+'_'+type2+'.svg');
+						head.prop('src','spn/img/mod_topbar_'+type+'_'+type2+'.png');
 					}
 				} else {
 					head.prop('src','');
