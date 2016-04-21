@@ -299,7 +299,7 @@ var NRS = (function (NRS, $, undefined) {
                              if (gateWayBTC[0] === false || gateWayBTC[1] === false || gateWayBTC[2] === false) {
                                  setTimeout(function () {
                                      getRelayMSIG(bridge,url,coin,index, tries++);
-                                 },3100);
+                                 },2000);
                             }
                          break;
                          case 'LTC':
@@ -307,7 +307,7 @@ var NRS = (function (NRS, $, undefined) {
                              if (gateWayLTC[0] === false || gateWayLTC[1] === false || gateWayLTC[2] === false) {
                                  setTimeout(function () {
                                      getRelayMSIG(bridge,url,coin,index, tries++);
-                                 },3100);
+                                 },2000);
                             }
                          break;
                          case 'DOGE':
@@ -315,7 +315,7 @@ var NRS = (function (NRS, $, undefined) {
                              if (gateWayDOGE[0] === false || gateWayDOGE[1] === false || gateWayDOGE[2] === false) {
                                  setTimeout(function () {
                                      getRelayMSIG(bridge,url,coin,index, tries++);
-                                 },3100);
+                                 },2000);
                              }
                          break;
                          case 'BTCD':
@@ -323,7 +323,7 @@ var NRS = (function (NRS, $, undefined) {
                              if (gateWayBTCD[0] === false || gateWayBTCD[1] === false || gateWayBTCD[2] === false) {
                                  setTimeout(function () {
                                      getRelayMSIG(bridge,url,coin,index, tries++);
-                                 },3100);
+                                 },2000);
                              }
                          break;
                          case 'VRC':
@@ -331,13 +331,13 @@ var NRS = (function (NRS, $, undefined) {
                              if (gateWayVRC[0] === false || gateWayVRC[1] === false || gateWayVRC[2] === false) {
                                  setTimeout(function () {
                                      getRelayMSIG(bridge,url,coin,index, tries++);
-                                 },3100);
+                                 },2000);
                              }
                          break;
                          case 'INFX':
                              gateWayINFX[data[0].gatewayid] = true;
                              if (gateWayINFX[0] === false || gateWayINFX[1] === false || gateWayINFX[2] === false) {
-                                 setInterval(function () {
+                                 setTimeout(function () {
                                      getRelayMSIG(bridge,url,coin,index, tries++);
                                  },2000);
                              }
@@ -345,7 +345,7 @@ var NRS = (function (NRS, $, undefined) {
                          case 'OPAL':
                              gateWayOPAL[data[0].gatewayid] = true;
                              if (gateWayOPAL[0] === false || gateWayOPAL[1] === false || gateWayOPAL[2] === false) {
-                                 setInterval(function () {
+                                 setTimeout(function () {
                                      getRelayMSIG(bridge,url,coin,index, tries++);
                                  },2000);
                              }
@@ -353,7 +353,7 @@ var NRS = (function (NRS, $, undefined) {
                          case 'DASH':
                              gateWayDASH[data[0].gatewayid] = true;
                              if (gateWayDASH[0] === false || gateWayDASH[1] === false || gateWayDASH[2] === false) {
-                                 setInterval(function () {
+                                 setTimeout(function () {
                                      getRelayMSIG(bridge,url,coin,index, tries++);
                                  },2000);
                              }
