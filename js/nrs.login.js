@@ -393,7 +393,7 @@ var NRS = (function(NRS, $, undefined) {
 						}
 					});
 					
-					setTimeout(function () { NRS.loadPlugins(); }, 1500);
+					setTimeout(function () { NRS.loadPlugins(); }, 3000);
 					
 					$(".sidebar .treeview").tree();
 					$('#dashboard_link a').addClass("ignore").click();
