@@ -950,6 +950,11 @@ var NRS = (function (NRS, $, undefined) {
                     multisig = true;
                 }
             break;
+            case 'DASH':
+                if(msig === '7') {
+                    multisig = true;
+                }
+            break;
         }
 
         return multisig;
