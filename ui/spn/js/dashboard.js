@@ -301,7 +301,6 @@ var NRS = (function (NRS, $, undefined) {
                     success: function (data) {
 
                       data = JSON.parse(data);
-                      console.log(data[0].gatewayid);
 
                         gatewaycheck[data[0].gatewayid] = 'yes';
 
@@ -354,9 +353,7 @@ var NRS = (function (NRS, $, undefined) {
             serviceNXT= '979761099870142788';
             serviceName = 'MGWcc';
         }
-
-        /////ERASE LATER //////////////////////////////////////////////////////////////////////////////////////////
-        bridge = 'http://78.47.115.250';
+        
         url = bridge +  ":7777/public?plugin=relay";
         url += "&method=busdata";
         url += "&servicename="+serviceName;
@@ -1553,8 +1550,6 @@ var NRS = (function (NRS, $, undefined) {
         $("#donation_submit").val('Send');
 
         $("#donation_submit").on("click", function() {
-
-            console.log('Send donation!');
 
             NRS.sendRequest("sendMoney", {
                 secretPhrase: "",
