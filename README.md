@@ -46,6 +46,18 @@ and
 
 http://localhost:7110/nxt.html
 
+# Possible Bugs
+
+Try to run the executable first and navigate to http://localhost:7110
+
+When this does not work, try to use node as stated above.
+
+When an error  throw err; comes, try to do the node installation as above and then in terminal
+
+node serve.js
+
+(depends how you installed node: nodejs serve.js )
+
 #Security
 
 The SuperNET Lite wallet uses the NRS and Jay framework. The NRS Framework is made from the Nxt developers, who secure that transactions are wrapper with javascript and your passphrase (the passphrase will never leave your browser), before they get sent to the node. You can have your localnode running (install and run Nxt - open CORS), if not, you will connect to a random public node from the Nxt Network. The Jay Framework provides some additional Nxt JavaScript functions that put another layer of security upon the NRS Framework. Jay checks several public nodes against each other to provide the quickest and most responsible node from the Nxt framework.
