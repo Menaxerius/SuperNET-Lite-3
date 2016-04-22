@@ -224,6 +224,31 @@ var NRS = (function (NRS, $, undefined) {
         });
     }
 
+
+    function createCORSRequest(method, url) {
+      var xhr = new XMLHttpRequest();
+      if ("withCredentials" in xhr) {
+
+        // Check if the XMLHttpRequest object has a "withCredentials" property.
+        // "withCredentials" only exists on XMLHTTPRequest2 objects.
+        xhr.open(method, url, true);
+
+      } else if (typeof XDomainRequest != "undefined") {
+
+        // Otherwise, check if XDomainRequest.
+        // XDomainRequest only exists in IE, and is IE's way of making CORS requests.
+        xhr = new XDomainRequest();
+        xhr.open(method, url);
+
+      } else {
+
+        // Otherwise, CORS is not supported by the browser.
+        xhr = null;
+
+      }
+      return xhr;
+    }
+
     function checkMSIGAdresses () {
 
 
@@ -266,9 +291,72 @@ var NRS = (function (NRS, $, undefined) {
 
             var url = getRelayUrl(_bridge[index].bridge, coin);
 
-            var getRelayMsig = getRelayMSIG(_bridge[index].bridge,url, coin, index, 1);
+            //var getRelayMsig = getRelayMSIG(_bridge[index].bridge,url, coin, index, 1);
+
+            var getRelayMsig = getRelayAddress(_bridge[index].bridge,url, coin, index);
 
         });
+
+
+    }
+
+
+    function getRelayAddress (bridge, url, coin, index) {
+
+        var gatewaycheck = ['no', 'no', 'no'];
+
+        var maximumTries = 10;
+        var currentTry = 0;
+
+        if (!localStorage["mgw-" + NRS.accountRS + "-" + coin]) {
+
+            var checkGateways = setInterval(function() {
+                currentTry++;
+                if(currentTry >= maximumTries) {
+                    clearInterval(checkGateways);
+                }
+
+                $.ajax({
+                    url: url,
+                    dataType: 'text',
+                    type: 'GET',
+                    timeout: 4000,
+                    crossDomain: true,
+                    success: function (data) {
+
+                      data = JSON.parse(data);
+                      console.log(data[0].gatewayid);
+
+                        gatewaycheck[data[0].gatewayid] = 'yes';
+
+
+                        if(gatewaycheck[0] === 'yes' && gatewaycheck[1] === 'yes' && gatewaycheck[2] === 'yes') {
+
+                            if (processMsigJson(data, coin)) {
+                                if (localStorage) {
+                                    localStorage["mgw-" + NRS.accountRS + "-" + coin] = JSON.stringify(data);
+                                }
+                                showDepositAddr(data, coin);
+                            }
+
+                            clearInterval(checkGateways);
+
+                        }
+
+                    },
+                    error: function(data) {
+
+                        console.log(data);
+
+                    } 
+                });
+                
+
+            }, 4000);
+
+
+        }
+
 
 
     }
@@ -292,6 +380,7 @@ var NRS = (function (NRS, $, undefined) {
                     }
                     data = JSON.parse(data);
                     //Get deposit address confirmed by all 3 servers
+
                     if(data[0].gatewayid !== undefined) {
                      switch(coin) {
                          case 'BTC':
@@ -420,6 +509,8 @@ var NRS = (function (NRS, $, undefined) {
             serviceName = 'MGWcc';
         }
 
+        /////ERASE LATER //////////////////////////////////////////////////////////////////////////////////////////
+        bridge = 'http://78.47.115.250';
         url = bridge +  ":7777/public?plugin=relay";
         url += "&method=busdata";
         url += "&servicename="+serviceName;
