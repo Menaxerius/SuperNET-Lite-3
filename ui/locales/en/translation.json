@@ -1137,7 +1137,7 @@
   "under_development":"--- Under Development ---",
   "view_tx_history":"View transaction history",
   "official_website":"Official website/forum for the coin",
-  "coin_operations":"Coin operations",
+  "coin_operations":"Send coin",
   "cash_operations":"Cash operations",
   "mail_operations":"byMail coin transfer experimental feature, available only for BTCD at this moment.",
   "basic-tooltip":"Basic console",

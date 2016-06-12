@@ -328,7 +328,7 @@ var Jay = {};
 	}
 
 
-Jay.pad = function(length, val)
+	Jay.pad = function(length, val)
 	{
     	var array = [];
     	for (var i = 0; i < length; i++) 

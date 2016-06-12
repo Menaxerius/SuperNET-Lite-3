@@ -827,6 +827,7 @@ function toByteArray(long) {
 	};
 
 	Jay.signBytes = function(message, secretPhrase) {
+		
 		var messageBytes = message;
 		var secretPhraseBytes = converters.stringToByteArray(secretPhrase);
 
@@ -847,7 +848,6 @@ function toByteArray(long) {
 		var h = _hash.getBytes();
 
 		var v = curve25519.sign(h, x, s);
-
 
 		return v.concat(h);
 	}

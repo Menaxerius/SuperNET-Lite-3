@@ -1411,7 +1411,6 @@ var NRS = (function (NRS, $, undefined) {
             maxFractionLength = resultCoinDetails[0].decimal;
         }
 
-
         if($(this).val() > resultCoinDetails[0].maxWithdraw) {
             $(this).val(resultCoinDetails[0].maxWithdraw);
             $.growl("Maximum "+resultCoinDetails[0].coin + " withdraw is "+resultCoinDetails[0].maxWithdraw+" "+resultCoinDetails[0].coin, {
