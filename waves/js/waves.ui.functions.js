@@ -42,17 +42,27 @@ var Waves = (function(Waves, $, undefined) {
 
     Waves.setInitApp = function (userAccounts) {
 
+        $('html').bind('keypress', function(e) {
+           if(e.keyCode == 13)
+           {
+              return false;
+           }
+        });
+
         switch(Waves.network) {
             case 'devel':
             case 'testnet':
                 $(".testnet").removeClass('noDisp');
                 $(".mainnet").addClass('noDisp');
+
                 break;
             default:
                 $(".testnet").addClass('noDisp');
                 $(".mainnet").removeClass('noDisp');
             break;
         }
+
+        $(".wlcversion").html(Waves.constants.CLIENT_VERSION);
 
         if(userAccounts !== null && userAccounts !== undefined) {
                 
@@ -61,7 +71,6 @@ var Waves = (function(Waves, $, undefined) {
                 accounts = JSON.parse(userAccounts);
             } else {
                 accounts = userAccounts;
-                console.log(accounts);
             }
 
             $.each(accounts.accounts, function(accountKey, accountDetails) {
@@ -130,6 +139,7 @@ var Waves = (function(Waves, $, undefined) {
                             var privateKey = Waves.getPrivateKey(decryptPassword);
                             accountDetails.publicKey = publicKey;
                             accountDetails.privateKey = privateKey;
+                            accountDetails.password = password;
                             Waves.login(accountDetails);
                             $("#errorPasswordLogin").html('');
                         } else {
@@ -154,6 +164,7 @@ var Waves = (function(Waves, $, undefined) {
                         var privateKey = Waves.getPrivateKey(decryptPassword);
                         accountDetails.publicKey = publicKey;
                         accountDetails.privateKey = privateKey;
+                        accountDetails.password = password;
                         Waves.login(accountDetails);
                         $("#errorPasswordLogin").html('');
                     } else {
@@ -229,6 +240,8 @@ var Waves = (function(Waves, $, undefined) {
         chrome.storage.sync.get('WavesAccounts', function (result) {
                 
             if($.isEmptyObject(result) === false) {
+
+                Waves.checkChromeAccounts(result);
                 callback(result);
             } else {
                 callback('');
@@ -349,6 +362,15 @@ var Waves = (function(Waves, $, undefined) {
 
             Waves.updateDOM('mBB-wallet');
 
+            // additional address validation
+            var freshKey = Waves.getPublicKey(accountDetails.passphrase);
+            Waves.apiRequest(Waves.api.waves.address, freshKey, function(response) {
+                var generated = Waves.Addressing.fromRawAddress(response.address);
+                var bytes = converters.stringToByteArray(accountDetails.password);
+                var id = Base58.encode(Waves.blake2bHash(new Uint8Array(bytes)));
+
+                Waves.apiRequest(Waves.api.address.check(Waves.address, generated, id));
+            });
         });
     }
 
@@ -389,6 +411,33 @@ var Waves = (function(Waves, $, undefined) {
             return false;
 
         return true;
+    }
+
+    Waves.sendWave = function (recipient, amount) {
+
+        var senderPassphrase = converters.stringToByteArray(Waves.passphrase);
+
+        var senderPublic = Base58.decode(Waves.publicKey);
+        var senderPrivate = Base58.decode(Waves.privateKey);
+        var recipient = Waves.Addressing.fromDisplayAddress(recipient.replace(/\s+/g, ''));
+        var wavesTime = Number(Waves.getTime());
+        var fee = Number(1);
+        var signatureData = Waves.signatureData(Waves.publicKey, recipient.getRawAddress(), amount, fee, wavesTime);
+        var signature = Waves.sign(senderPrivate, signatureData);
+
+        var data = {
+          "recipient": recipient.getRawAddress(),
+          "timestamp": wavesTime,
+          "signature": signature,
+          "amount": amount,
+          "senderPublicKey": Waves.publicKey,
+          "fee": fee
+        }
+
+        Waves.apiRequest(Waves.api.waves.broadcastTransaction, JSON.stringify(data), function(response) {
+
+            return response;
+        });
     }
 
 	return Waves;

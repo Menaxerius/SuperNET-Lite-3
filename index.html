@@ -7,31 +7,62 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <style>
+			.background {
+			    min-height: 100%;
+				background-size: cover;
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+        </style>
+        <script src="js/3rdparty/jquery.js"></script>
+        <script>
+
+        $(document).ready(function() {
+        	var backgroundImages = ['first.jpg', 'second.jpg', 'third.jpg', 'fourth.jpg', 'fifth.jpg', 'sixth.jpg'];
+        	var picture = Math.floor(Math.random() * backgroundImages.length);
+        	$(".background").css('background-image', 'linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("img/'+backgroundImages[picture]+'")');
+        });
+        </script>
     </head>
-<body>
+<body class="background">
 
 <div class="container">
-	<div class="row" style="margin-top: 10%;">
+	<div class="row" style="margin-top: 20%;">
 		
-		<div class="col-lg-4 col-md-4">
+		<div class="col-lg-4 col-md-4 text-center">
 			<a href="ui/supernet.html">
-				<img src="img/logo.png" width="50%" height="50%" />
+				<img src="img/supernet3.png" width="50%" height="50%" />
 			</a>
 		</div>
 		
-		<div class="col-lg-4 col-md-4">
+		<div class="col-lg-4 col-md-4 text-center">
 			<a href="nxt.html">
 				<img src="img/nxt_logo.png"  width="50%" height="50%" />
 			</a>
 		</div>
 
-		<div class="col-lg-4 col-md-4">
+		<div class="col-lg-4 col-md-4 text-center">
 			<a href="waves/index.html">
-				<img src="img/waves_logo.png" width="50%" height="50%" />
+				<img src="img/waves.png" width="50%" height="50%" />
 			</a>
 		</div>
 
 	</div>
+	<!--
+	<div class="row" style="margin-top: 10%;">
+		<div class="panel panel-default">
+		  <div class="panel-body">
+		    <b>Donate</b>
+		    <br/>
+		    Nxt: NXT-CJQ9-7CAG-8FW4-7F9P8<br/>
+		    BTC: 37zoba6DKqHPj277fX5QV12ZNdW46263UT<br/>
+		    Wave: 1W3P2rm85o5ruE12NhV9LEdY67vmsQ9jmb6Ub
+		  </div>
+		</div>
+	</div>
+	-->
 </div>
 
 <!-- 
