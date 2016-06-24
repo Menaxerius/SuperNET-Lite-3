@@ -1245,11 +1245,11 @@ var NRS = (function(NRS, $, undefined) {
   "jay_wallet_code":"Jay Wallet Code",
   "import_nxt_passphrase":"Import Nxt passphrase",
   "enter_passphrase":"You must enter your passphrase",
-  "enter_pin":"You must enter your pin number",
+  "enter_pin":"You must enter your password",
   "jay_select_account":"Select an Account to Login with",
   "jay_no_account_added":"No Account",
-  "enter_pin_number_here":"Enter your pin number here...",
-  "error_pin_number": "Incorrect pin number.",
+  "enter_pin_number_here":"Enter your password here...",
+  "error_pin_number": "Incorrect password.",
   "please_wait":"--- Please Wait ---",
   "service_under_maintenance":"Service under maintenance"
 };
